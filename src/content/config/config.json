@@ -11,12 +11,20 @@
       "link": "/"
     },
     {
-      "title": "Blog",
-      "link": "/blog"
+      "title": "Photos",
+      "link": "/photos-gerants"
     },
     {
-      "title": "About",
-      "link": "/about"
+      "title": "Événements",
+      "link": "/evenements"
+    },
+    {
+      "title": "Recettes",
+      "link": "/recettes"
+    },
+    {
+      "title": "Blog",
+      "link": "/blog"
     }
   ],
   "contactLinks": [
