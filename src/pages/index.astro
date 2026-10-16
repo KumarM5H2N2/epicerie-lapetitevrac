@@ -5,7 +5,6 @@ import boutiqueData from '../../content/infos/boutique.json';
 // 🚀 ON IMPORTE NOTRE COMPOSANT VISUEL GÉRANTS
 import Gerants from '../components/blocks/Gerants.astro';
 
-
 // 2. Syntaxe moderne pour Astro v6+ / Vite (Récupération des arrivages)
 const modules = import.meta.glob('../../content/arrivages/*.json', { eager: true });
 const arrivagesList = Object.values(modules).map((mod: any) => mod.default || mod);
@@ -21,6 +20,23 @@ const arrivagesList = Object.values(modules).map((mod: any) => mod.default || mo
   </head>
   <body class="bg-stone-50 min-h-screen text-stone-800 antialiased font-sans">
     
+    <!-- 🧭 BARRE DE NAVIGATION ET ONGLETS ACCESSIBLES -->
+    <nav class="bg-white border-b border-stone-200 sticky top-0 z-50 shadow-sm">
+      <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
+        <!-- Logo / Accueil -->
+        <a href="/" class="font-black text-emerald-800 tracking-tight text-lg hover:text-emerald-950 transition-colors flex items-center gap-1.5">
+          🍏 {boutiqueData.titre}
+        </a>
+        <!-- Liens vers vos 3 nouvelles pages -->
+        <div class="flex items-center gap-4 sm:gap-6 font-semibold text-stone-600 text-sm">
+          <a href="/" class="text-emerald-700 font-bold transition-colors">Accueil</a>
+          <a href="/photos-gerants" class="hover:text-emerald-700 transition-colors">Photos</a>
+          <a href="/evenements" class="hover:text-emerald-700 transition-colors">Événements</a>
+          <a href="/recettes" class="hover:text-emerald-700 transition-colors">Recettes ✨</a>
+        </div>
+      </div>
+    </nav>
+
     <!-- EN-TÊTE / HERO SECTION -->
     <header class="bg-gradient-to-br from-green-800 to-emerald-950 text-white py-20 px-4 text-center shadow-md">
       <div class="max-w-3xl mx-auto">
@@ -75,15 +91,12 @@ const arrivagesList = Object.values(modules).map((mod: any) => mod.default || mo
       </div>
     </section>
 
-
     <!-- 🚀 NOTRE NOUVELLE SECTION GÉRANTS DE L'ÉPICERIE -->
     <Gerants 
       titre={boutiqueData.gerantsTitre} 
       texte={boutiqueData.gerantsTexte} 
       photo={boutiqueData.gerantsPhoto} 
     />
-
-
 
     <!-- FORMULAIRE DE CONTACT GMAIL -->
     <section class="max-w-3xl mx-auto px-4 py-12 bg-white rounded-2xl border border-stone-200 shadow-sm my-12">
@@ -144,4 +157,3 @@ const arrivagesList = Object.values(modules).map((mod: any) => mod.default || mo
 
   </body>
 </html>
-
