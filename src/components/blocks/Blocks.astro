@@ -1,4 +1,5 @@
 ---
+import Gerants from './Gerants.astro';
 import { tinaField } from '@tinacms/astro/tina-field';
 import Callout from './Callout.astro';
 import Content from './Content.astro';
@@ -31,6 +32,8 @@ const blocks = (data?.blocks ?? []).filter(b => b !== null);
 			case 'PageBlocksStats': return <Stats data={block} />;
 			case 'PageBlocksTestimonial': return <Testimonial data={block} />;
 			case 'PageBlocksVideo': return <Video data={block} />;
+			// 🚀 AJOUT DE NOTRE BLOC GÉRANTS SUR-MESURE
+			case 'PageBlocksGerants': return <Gerants titre={block.titre} texte={block.texte} photo={block.photo} />;
 		}
 	})();
 	return (

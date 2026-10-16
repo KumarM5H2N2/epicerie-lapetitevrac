@@ -4,6 +4,10 @@ import TinaIsland from '@tinacms/astro/TinaIsland.astro';
 import PageBody from '../components/islands/PageBody.astro';
 import { getConfig, getPage, listPages } from '../lib/data';
 import { islands } from '../lib/islands';
+// 🚀 1. IMPORTATION DIRECTE DU FICHIER DE DONNÉES DES GÉRANTS
+import boutiqueData from '../../content/infos/boutique.json';
+// 🚀 2. IMPORTATION DU COMPOSANT VISUEL DES GÉRANTS
+import Gerants from '../components/blocks/Gerants.astro';
 
 export async function getStaticPaths() {
 	const pages = await listPages();
@@ -27,4 +31,11 @@ const config = (await getConfig()).data?.config ?? null;
 	<TinaIsland name="page" wrapper={islands.page.wrapper} params={{ slug }} primary>
 		<PageBody data={data} />
 	</TinaIsland>
+
+	<!-- 🚀 3. AFFICHAGE DE LA SECTION DES GÉRANTS TOUT EN BAS DE LA PAGE -->
+	<Gerants 
+		titre={boutiqueData.gerantsTitre} 
+		texte={boutiqueData.gerantsTexte} 
+		photo={boutiqueData.gerantsPhoto} 
+	/>
 </Base>

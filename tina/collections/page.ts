@@ -1,3 +1,4 @@
+import { gerantsBlockSchema } from '../../src/components/blocks/gerants.template';
 import type { Collection } from 'tinacms';
 import { heroBlockSchema } from '../../src/components/blocks/hero.template';
 import { featuresBlockSchema } from '../../src/components/blocks/features.template';
@@ -36,6 +37,7 @@ export const PageCollection: Collection = {
 				"The visible content of the page. When the page starts with a Hero block, its Headline is the main on-page heading — edit that to change what visitors see at the top.",
 			ui: { visualSelector: true },
 			templates: [
+				gerantsBlockSchema,
 				heroBlockSchema,
 				calloutBlockSchema,
 				featuresBlockSchema,
