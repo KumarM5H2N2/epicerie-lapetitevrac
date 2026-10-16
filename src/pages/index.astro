@@ -2,6 +2,10 @@
 // 1. Importation directe du fichier JSON de la boutique
 import boutiqueData from '../../content/infos/boutique.json';
 
+// 🚀 ON IMPORTE NOTRE COMPOSANT VISUEL GÉRANTS
+import Gerants from '../components/blocks/Gerants.astro';
+
+
 // 2. Syntaxe moderne pour Astro v6+ / Vite (Récupération des arrivages)
 const modules = import.meta.glob('../../content/arrivages/*.json', { eager: true });
 const arrivagesList = Object.values(modules).map((mod: any) => mod.default || mod);
@@ -70,6 +74,16 @@ const arrivagesList = Object.values(modules).map((mod: any) => mod.default || mo
         })}
       </div>
     </section>
+
+
+    <!-- 🚀 NOTRE NOUVELLE SECTION GÉRANTS DE L'ÉPICERIE -->
+    <Gerants 
+      titre={boutiqueData.gerantsTitre} 
+      texte={boutiqueData.gerantsTexte} 
+      photo={boutiqueData.gerantsPhoto} 
+    />
+
+
 
     <!-- FORMULAIRE DE CONTACT GMAIL -->
     <section class="max-w-3xl mx-auto px-4 py-12 bg-white rounded-2xl border border-stone-200 shadow-sm my-12">
