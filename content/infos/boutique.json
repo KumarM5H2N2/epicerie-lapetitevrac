@@ -1,8 +1,10 @@
 {
-    "titre": "Épicerie Lapetitevrac",
-    "description": "Votre épicerie de produits bio, locaux et zéro déchet au Pellerin.",
-    "adresse": "42 rue de la Jouardais, 44640 Le Pellerin",
-    "horaires": "Du mardi au samedi : 9h30 - 13h00 / 15h30 - 19h00",
-    "googleMaps": "https://google.com"
-  }
-  
+  "titre": "Épicerie Lapetitevrac",
+  "description": "Votre épicerie de produits bio, locaux et zéro déchet au Pellerin.",
+  "adresse": "42 rue de la Jouardais, 44640 Le Pellerin",
+  "horaires": "Du mardi au samedi : 9h30 - 13h00 / 15h30 - 19h00",
+  "googleMaps": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x4805974d1ef97fcf:0x3f4be39b703c1c2c?sa=X&ved=1t:8290&ictx=111",
+  "gerantsTitre": "Qui se cache derrière le comptoir ?",
+  "gerantsTexte": "Passionnés par le maraîchage bio et le vrac, nous avons ouvert cette épicerie pour reconnecter les habitants du Pellerin avec les producteurs de notre belle région de Loire-Atlantique. Ici, chaque légume a une histoire !",
+  "gerantsPhoto": ""
+}
