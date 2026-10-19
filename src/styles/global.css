@@ -47,6 +47,97 @@
 	--color-chart-5: var(--chart-5);
 }
 
+
+
+
+:root {
+	--radius: 0.625rem;
+	/* Fond gris très clair, légèrement teinté de vert sauge */
+	--background: oklch(0.98 0.01 150);
+	/* Texte gris foncé ardoise/lichen */
+	--foreground: oklch(0.25 0.02 150);
+	/* Cartes blanches pures avec une micro-touche de vert */
+	--card: oklch(0.99 0.005 150);
+	--card-foreground: oklch(0.25 0.02 150);
+	--popover: oklch(0.99 0.005 150);
+	--popover-foreground: oklch(0.25 0.02 150);
+	
+	/* Couleur primaire : Un beau vert sauge pastel signature pour l'épicerie */
+	--primary: oklch(0.65 0.08 150);
+	--primary-foreground: oklch(0.99 0.005 150);
+	
+	/* Éléments secondaires et survol en gris-vert doux */
+	--secondary: oklch(0.93 0.015 150);
+	--secondary-foreground: oklch(0.35 0.02 150);
+	--muted: oklch(0.93 0.015 150);
+	--muted-foreground: oklch(0.50 0.02 150);
+	--accent: oklch(0.90 0.02 150);
+	--accent-foreground: oklch(0.30 0.03 150);
+	
+	/* Destructif (alertes/suppression) adapté pour rester doux */
+	--destructive: oklch(0.60 0.15 25);
+	
+	/* Bordures et contours discrets */
+	--border: oklch(0.88 0.015 150);
+	--input: oklch(0.88 0.015 150);
+	--ring: oklch(0.65 0.08 150);
+	
+	/* Graphiques (si utilisés) harmonisés vert/gris */
+	--chart-1: oklch(0.65 0.08 150);
+	--chart-2: oklch(0.55 0.05 160);
+	--chart-3: oklch(0.75 0.06 140);
+	--chart-4: oklch(0.45 0.03 150);
+	--chart-5: oklch(0.85 0.04 155);
+}
+
+.dark {
+	/* Mode sombre profond mais doux en nuances de gris-vert forêt */
+	--background: oklch(0.18 0.02 150);
+	--foreground: oklch(0.93 0.01 150);
+	--card: oklch(0.22 0.02 150);
+	--card-foreground: oklch(0.93 0.01 150);
+	--popover: oklch(0.22 0.02 150);
+	--popover-foreground: oklch(0.93 0.01 150);
+	
+	/* Vert sauge lumineux pour le mode sombre */
+	--primary: oklch(0.75 0.07 150);
+	--primary-foreground: oklch(0.18 0.02 150);
+	
+	--secondary: oklch(0.28 0.02 150);
+	--secondary-foreground: oklch(0.93 0.01 150);
+	--muted: oklch(0.28 0.02 150);
+	--muted-foreground: oklch(0.65 0.02 150);
+	--accent: oklch(0.32 0.02 150);
+	--accent-foreground: oklch(0.93 0.01 150);
+	
+	--destructive: oklch(0.65 0.13 25);
+	--border: oklch(0.93 0.01 150 / 12%);
+	--input: oklch(0.93 0.01 150 / 15%);
+	--ring: oklch(0.75 0.07 150);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 :root {
 	--radius: 0.625rem;
 	--background: oklch(0.99 0.004 285);
@@ -94,6 +185,12 @@
 	--input: oklch(0.95 0.01 285 / 15%);
 	--ring: oklch(0.70 0.18 40);
 }
+
+*/
+
+
+
+
 
 @layer base {
 	* {
